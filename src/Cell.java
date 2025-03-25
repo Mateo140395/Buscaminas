@@ -15,12 +15,46 @@ public class Cell {
     private int row;
     private int column;
     
-    public final int TAPED=1;
-    public final int MARKED=2;
-    public final int UNTAPED=3;
+    public final int TAPADA=1;
+    public final int MARCADA=2;
+    public final int DESTAPADA=3;
 
     public Cell(int row, int column) {
         this.row = row;
+        this.column = column;
+        this.mined=false;
+        this.state=TAPADA|MARCADA|DESTAPADA;
+    }
+
+    public boolean isMined() {
+        return mined;
+    }
+
+    public void setMined(boolean mined) {
+        this.mined = mined;
+    }
+
+    public int getState() {
+        return state;
+    }
+
+    public void setState(int state) {
+        this.state = state;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public void setColumn(int column) {
         this.column = column;
     }
     
