@@ -73,7 +73,14 @@ public class Game {
     }
 
     public boolean checkCellsToOpen() {
-        return false;
+        for (int i=0; i<cells.length;i++){
+            for(int j=0; j<cells[i].length;j++){
+                if(!cells[i][j].isMined() && cells[i][j].getState()!=Cell.DESTAPADA){
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     private void fillMines(int mines) {

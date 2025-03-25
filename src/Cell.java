@@ -15,15 +15,15 @@ public class Cell {
     private int row;
     private int column;
     
-    public final int TAPADA=1;
-    public final int MARCADA=2;
-    public final int DESTAPADA=3;
+    public final static int TAPADA=1;
+    public final static int MARCADA=2;
+    public final static int DESTAPADA=3;
 
     public Cell(int row, int column) {
         this.row = row;
         this.column = column;
         this.mined=false;
-        this.state=TAPADA|MARCADA|DESTAPADA;
+        this.state=TAPADA;
     }
 
     public boolean isMined() {
